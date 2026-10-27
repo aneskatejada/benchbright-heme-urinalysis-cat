@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10244b">
+  <meta name="description" content="BenchBright Learning MLS/MLT(ASCP) adaptive hematology, coagulation, urinalysis and body fluids practice exam.">
+  <title>Hematology & Urinalysis CAT | BenchBright Learning</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/questions.js" defer></script>
+  <script src="assets/cat-engine.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="container brandrow">
+      <a class="brand" href="./" aria-label="BenchBright Learning home"><span class="brandicon" aria-hidden="true">✦</span><span><b>BenchBright</b><small>LEARNING</small></span></a>
+      <div class="meta-tag">MLS / MLT (ASCP) PRACTICE</div>
+    </div>
+  </header>
+  <main class="container" id="main" tabindex="-1">
+    <div id="errors" role="alert" aria-live="assertive" hidden></div>
+    <section class="panel hero" id="welcome" aria-labelledby="welcome-title">
+      <div class="eyebrow">NEW • COMPUTER-ADAPTIVE PRACTICE</div>
+      <h1 id="welcome-title">Hematology &amp; Urinalysis <span>CAT Exam</span></h1>
+      <p class="intro">Practice smarter with a randomized 100-question exam that adjusts item difficulty using your response history. Includes coagulation and body-fluid analysis.</p>
+      <div class="stats-grid">
+        <div class="stat"><b>200</b><span>Question bank</span></div>
+        <div class="stat"><b>100</b><span>Questions per attempt</span></div>
+        <div class="stat"><b>4</b><span>Content areas</span></div>
+        <div class="stat"><b>1–5</b><span>Difficulty bands</span></div>
+      </div>
+      <h2>Included in every attempt</h2>
+      <div class="subjects" aria-label="Subjects and distribution">
+        <span>Hematology <strong>25</strong></span>
+        <span>Hemostasis &amp; Coagulation <strong>25</strong></span>
+        <span>Urinalysis <strong>25</strong></span>
+        <span>Body Fluids <strong>25</strong></span>
+      </div>
+      <div class="info-list">
+        <div><span class="info-icon" aria-hidden="true">✓</span><p><strong>Adapted to your performance</strong><br>Question difficulty is chosen using a provisional ability estimate that considers your previous responses.</p></div>
+        <div><span class="info-icon" aria-hidden="true">✓</span><p><strong>Different exam each time</strong><br>Questions and answer positions are randomized. No question repeats within an attempt.</p></div>
+        <div><span class="info-icon" aria-hidden="true">✓</span><p><strong>Detailed teaching feedback</strong><br>After question 100, review every item, your selected answers and all four explanations.</p></div>
+      </div>
+      <div class="action-row"><button id="start" class="btn btn-primary">Start 100-question exam <span aria-hidden="true">→</span></button><button id="resume" class="btn btn-outline" hidden>Resume saved attempt</button></div>
+      <p class="fineprint"><strong>Practice use only.</strong> This is not an official ASCP exam or a calibrated predictor of certification performance. Your in-progress answers are saved only in this browser.</p>
+    </section>
+    <section class="panel exam" id="exam" aria-labelledby="exam-title" hidden>
+      <div class="examtop">
+        <div><p class="eyebrow" id="exam-topic">TOPIC</p><h1 id="exam-title">Question <span id="question-position">1</span> of 100</h1></div>
+        <div class="clockbox"><small>Elapsed time</small><strong id="timer">00:00</strong></div>
+      </div>
+      <div class="progressbar" role="progressbar" aria-label="Exam completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><div id="progressfill"></div></div>
+      <div class="q-meta"><span id="answered-count">0 answered</span><span>Choose one answer • no backtracking</span></div>
+      <h2 id="question-text" class="question-text"></h2>
+      <form id="answer-form"><fieldset><legend class="sr-only">Answer options</legend><div id="answer-options" class="answer-options"></div></fieldset><div class="action-row"><button class="btn btn-primary" type="submit" id="next" disabled>Submit answer &amp; continue <span aria-hidden="true">→</span></button><span class="inline-help">Explanations appear after you finish.</span></div></form>
+    </section>
+    <section class="panel results" id="results" aria-labelledby="results-title" hidden>
+      <p class="eyebrow">COMPLETED • PERSONALIZED FEEDBACK</p>
+      <h1 id="results-title">Your practice results</h1>
+      <p class="intro">Your detailed answer review is below. Percent correct and provisional ability estimate measure different things.</p>
+      <div class="results-stats">
+        <div class="result-number"><small>Correct answers</small><strong id="res-score"></strong><span id="res-count"></span></div>
+        <div class="result-number"><small>Provisional ability (θ)</small><strong id="res-theta"></strong><span id="res-se"></span></div>
+      </div>
+      <h2>Performance by subject</h2>
+      <div id="res-categories" class="breakdown"></div>
+      <p class="fineprint">The ability estimate uses uncalibrated difficulty labels and a Bayesian 1-parameter logistic model. It is for guiding study, not an ASCP-scaled score, pass/fail decision or validated proficiency measurement.</p>
+      <div class="action-row"><button class="btn btn-primary" id="restart">Take a new randomized attempt</button><button class="btn btn-outline" id="download">Download results CSV</button><button class="btn btn-ghost" id="print">Print report</button></div>
+      <div class="review-header"><h2>Detailed answer review</h2><span>All questions • four rationales per item</span></div>
+      <div id="answer-review" class="answer-review"></div>
+    </section>
+  </main>
+  <footer><div class="container"><strong>BenchBright Learning</strong><span>Complex Science. Made Visual.</span><p>Independent educational practice resource. Not affiliated with or endorsed by ASCP.</p></div></footer>
+</body>
+</html>
